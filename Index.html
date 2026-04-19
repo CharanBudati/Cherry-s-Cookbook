@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cherry's Cookbook</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<section id="loginSection">
+
+<div class="login-box">
+<h2>Cherry's Cookbook</h2>
+
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+<button onclick="signup()">Signup</button>
+
+<p id="loginError"></p>
+
+</div>
+</section>
+
+<div id="mainContent" class="hidden">
+
+<header>
+<h1>🍲 Cherry's Cookbook</h1>
+<p id="welcomeUser"></p>
+<button class="logout-btn" onclick="logout()">Logout</button>
+<button onclick="showFavorites()">❤️ Favorites</button>
+</header>
+
+
+
+<section id="cuisineSection"></section>
+<div class="cuisine-container">
+<h2>Select Cuisine</h2>
+<button onclick="showRecipes('Indian')">Indian</button>
+<button onclick="showRecipes('Chinese')">Chinese</button>
+<button onclick="showRecipes('Italian')">Italian</button>
+<button onclick="showRecipes('Mexican')">Mexican</button>
+<button onclick="showRecipes('Japanese')">Japanese</button>
+<button onclick="showRecipes('South Indian')">South Indian</button>
+<button onclick="showRecipes('Continental')">Continental</button>
+<button onclick="showRecipes('Coffees')">Coffees</button>
+</div>
+
+</section>
+
+<section id="recipeSection" class="hidden">
+<button onclick="goBack()">⬅ Back</button>
+<h2 id="recipeTitle"></h2>
+<div id="recipeList"></div>
+</section>
+
+
+
+<section id="favoritesSection" class="hidden">
+
+<button onclick="goBack()">⬅ Back</button>
+<h2>My Favorites</h2>
+
+<div id="favoritesList"></div>
+
+</section>
+
+
+
+
+<section id="detailSection" class="hidden">
+
+<button onclick="goBackToRecipes()">⬅ Back</button>
+
+<h2 id="dishName"></h2>
+
+<div class="detail-container">
+
+<div class="ingredients">
+<h3>Ingredients</h3>
+<ul id="ingredientsList"></ul>
+</div>
+
+<div class="image">
+<img id="dishImage">
+</div>
+
+</div>
+
+<div class="instructions">
+<h3>Instructions</h3>
+<ol id="instructionsText"></ol>
+</div>
+
+</section>
+
+<script src="script.js"></script>
+</div>
+</body>
+</html>
